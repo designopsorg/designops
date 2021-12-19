@@ -1,0 +1,24 @@
+{
+  "name": "designops.guide",
+  "version": "1.0.0",
+  "description": "DesignOps.guide",
+  "main": "index.html",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/designopsorg/designops.git"
+  },
+  "keywords": [],
+  "author": "Raz Tirboaca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/designopsorg/designops/issues"
+  },
+  "homepage": "https://github.com/designopsorg/designops#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
+}
