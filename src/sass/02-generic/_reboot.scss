@@ -1,0 +1,147 @@
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html, 
+body {
+    height: 100%;
+}
+
+body {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img, 
+picture, 
+video, 
+canvas, 
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, 
+button, 
+textarea, 
+select {
+    font: inherit;
+}
+
+p, 
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+// Code
+
+pre,
+code,
+kbd,
+samp {
+    font-size: 1em;
+    font-family: $font-family-code;
+}
+
+pre {
+--margin-bottom: var(--space-large);
+--color: var(--pre-color);
+--bg: var(--pre-bg);
+
+display: block;
+margin-top: 0;
+margin-bottom: var(--margin-bottom);
+overflow: auto;
+color: var(--color);
+font-size: $code-font-size;
+background: var(--bg);
+
+// Account for some code outputs that place code tags in pre tags
+code {
+    color: inherit;
+    font-size: inherit;
+    word-break: normal;
+}
+}
+
+code {
+--color: var(--code-color);
+
+color: var(--color);
+font-size: $code-font-size;
+word-wrap: break-word;
+
+a > & {
+    color: inherit;
+}
+}
+
+table {
+font-size: inherit;
+caption-side: bottom;
+border-collapse: collapse;
+}
+
+caption {
+--color: var(--color-neutral-base);
+
+color: var(--color);
+text-align: left;
+}
+
+th {
+font-weight: $font-weight-bold;
+text-align: inherit;
+text-align: -webkit-match-parent;
+}
+
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+border-color: inherit;
+border-style: solid;
+border-width: 0;
+}
+
+
+
+output {
+display: inline-block;
+}
+
+iframe {
+border: 0;
+}
+
+summary {
+display: list-item;
+cursor: pointer;
+}
+
+progress {
+vertical-align: baseline;
+}
+
+[hidden] {
+display: none !important;
+}

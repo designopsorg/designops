@@ -1,0 +1,27 @@
+a {
+    --color: var(--link-color);
+    --border-color: var(--link-border-color);
+    --hover-color: var(--color);
+    --hover-border-color: var(--hover-color);
+    
+    color: var(--color);
+    text-decoration-color: var(--border-color);
+    text-underline-offset: 1px;
+    transition: color .15s ease-in, text-decoration-color .15s ease-in;
+}
+    
+a:hover {
+    color: var(--hover-color);
+    text-decoration-color: var(--hover-border-color);
+}
+
+a.decoration-none {
+    text-decoration: none;
+}
+
+a:not([href]):not([class]) {
+    &,
+    &:hover {
+        --color: var(--);
+    }
+}

@@ -1,0 +1,10 @@
+// Make color utility classes
+@each $name, $color in $ui-colors {
+    .#{$name} {
+        color: var(--#{$name});
+    }
+}
+
+.color-inherit {
+    color: inherit;
+}

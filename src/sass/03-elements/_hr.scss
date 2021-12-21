@@ -1,0 +1,8 @@
+hr {
+    --color: var(--divider);
+
+    color: var(--color);
+    height: 1px;
+    background-color: currentColor;
+    border: 0;
+}
