@@ -1,0 +1,14 @@
+.quote {
+    --padding: var(--space-huge) var(--space-giant) 0;
+
+    padding: var(--padding);
+}
+
+.quote figcaption {
+    margin-top: var(--space-small);
+    opacity: var(--opacity-subtle);
+}
+
+.quote figcaption a {
+    --color: inherit;
+}

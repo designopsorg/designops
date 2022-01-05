@@ -1,4 +1,7 @@
 b,
 strong {
-    font-weight: $font-weight-bold;
+    --color: var(--text-primary);
+
+    font-weight: $font-weight-semibold;
+    color: var(--color);
 }

@@ -1,0 +1,24 @@
+blockquote {
+    --font-family: var(--font-family-quote);
+
+    @include font-scale(text-quote);
+    font-family: var(--font-family);
+    font-style: normal;
+
+    &::before {
+        content: open-quote;
+        display: block;
+        font-size: 3em;
+        line-height: 0;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: var(--space-huge);
+        height: 1px;
+        margin-top: var(--space-small);
+        background: var(--text-primary);
+        opacity: var(--opacity-muted);
+    }
+}

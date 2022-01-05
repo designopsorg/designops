@@ -1,33 +1,30 @@
 %heading {
-    --font-family: var(--font-family-headings);
+    font-family: var(--font-family-headings);
     @supports (font-variation-settings: normal) {
-        --font-family: var(--font-family-headings-v);
+        font-family: var(--font-family-headings-v);
     }
-    
-    font-weight: normal;
-    font-family: var(--font-family);
     font-style: $headings-font-style;
     color: var(--text-primary);
 }
     
 h1 {
 @extend %heading;
-    @include font-scale(heading-large);
+    @include font-scale(display-small);
 }
 
 h2 {
 @extend %heading;
-    @include font-scale(heading-medium);
+    @include font-scale(heading-large);
 }
 
 h3 {
     @extend %heading;
-    @include font-scale(heading-small);
+    @include font-scale(heading-medium);
 }
 
 h4 {
     @extend %heading;
-    @include font-scale(text-body);
+    @include font-scale(heading-small);
 }
 
 h5 {

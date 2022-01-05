@@ -66,7 +66,7 @@
     padding-left: calc(var(--gap-x) / 2);
 }
 
-@mixin make-row-col($size, $columns: $row-col) {
+@mixin make-row-col($size, $columns: $row-cols) {
     flex: 0 0 auto;
     width: percentage(math.div($size, $columns));
 }
@@ -76,7 +76,7 @@
     width: auto;
 }
 
-@mixin make-row-col-offset($size, $columns: $row-col) {
+@mixin make-row-col-offset($size, $columns: $row-cols) {
     $num: math.div($size, $columns);
     margin-left: if($num == 0, 0, percentage($num));
 }
@@ -89,8 +89,8 @@
     }
 }
 
-// Generate the correct number of grid classes given any value of `$row-col`.
-@mixin make-row-columns($columns: $row-col, $gap: $gap-default, $breakpoints: $grid-breakpoints) {
+// Generate the correct number of grid classes given any value of `$row-cols`.
+@mixin make-row-columns($columns: $row-cols, $gap: $gap-default, $breakpoints: $grid-breakpoints) {
     @each $breakpoint in map-keys($breakpoints) {
         $infix: breakpoint-infix($breakpoint, $breakpoints);
 

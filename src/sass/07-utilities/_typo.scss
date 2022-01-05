@@ -16,6 +16,19 @@
     @extend %heading;
 }
 
+// Text color
+.text-primary {
+    color: var(--text-primary);
+}
+
+.text-secondary {
+    color: var(--text-secondary);
+}
+
+.text-accent {
+    color: var(--text-accent);
+}
+
 .text-uppercase {
-    letter-spacing: .08em;
+    letter-spacing: .04em;
 }

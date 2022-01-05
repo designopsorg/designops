@@ -1,41 +1,52 @@
 .nav {
+    --gap: 0;
+
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 0;
-    padding-left: 0;
+    flex-direction: column;
+    gap: var(--gap);
     list-style: none;
 }
 
 .nav-link {
-    --padding-y: var(--space-medium);
-    --padding-x: var(--space-medium);
-    --color: var(--text-muted);
+    --padding-y: var(--space-tiny);
+    --padding-x: 0;
+    --color: var(--action-color);
+    --opacity: var(--opacity-subtle);
     --hover-color: var(--color);
-    --selected-color: var(--text-primary);
-    --disabled-color: var(--text-muted);
+    --hover-opacity: 1;
+    --selected-color: var(--text-accent);
+    --selected-bg: none;
+    --selected-opacity: 1;
 
-    display: flex;
+    display: inline-flex;
     align-items: center;
     padding: var(--padding-y) var(--padding-x);
+    font-family: var(--font-family-headings);
+    @supports (font-variation-settings: normal) {
+        font-family: var(--font-family-headings-v);
+    }
+    @include font-scale(text-small);
+    font-weight: $font-weight-semibold;
     color: var(--color);
+    border-radius: var(--surface-radius-small);
     text-decoration: none;
     cursor: pointer;
+    opacity: var(--opacity);
 
     &:hover,
     &:focus {
         --color: var(--hover-color);
-
-        text-decoration: none;
+        opacity: var(--hover-opacity);
     }
 
     &.selected {
         --color: var(--selected-color);
+        background-color: var(--selected-bg);
+        opacity: var(--selected-opacity);
     }
 
     &.disabled {
-        --color: var(--disabled-color);
-
+        opacity: var(--opacity-muted);
         cursor: not-allowed;
         pointer-events: none;
     }

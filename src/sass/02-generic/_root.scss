@@ -3,6 +3,7 @@
     --font-family-base-v: #{$font-family-base-v};
     --font-family-headings: #{$headings-font-family};
     --font-family-headings-v: #{$headings-font-family-v};
+    --font-family-quote: #{$font-family-quote};
 
     // Spacers
     @each $name, $value in $spacers {
@@ -14,9 +15,19 @@
         --#{$name}: #{$value};
     }
 
-    font-size: $font-size-root;
+    // Theme
+    @each $name, $value in $theme-light {
+        --#{$name}: #{$value};
+    }
 
-    @each $name, $color in $ui-colors {
-        --#{$name}: #{$color};
+    @media (prefers-color-scheme: dark) {
+        @each $name, $value in $theme-dark {
+            --#{$name}: #{$value};
+        }
+    }
+
+    // Border radius
+    @each $name, $value in $border-radius {
+        --#{$name}: #{$value};
     }
 }

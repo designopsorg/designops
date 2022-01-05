@@ -1,0 +1,25 @@
+.format {
+
+    h2 {
+        margin-top: var(--space-giant);
+    }
+    
+    h3,
+    p {
+        margin-top: var(--space-huge);
+    }
+
+    .quote {
+        margin-top: var(--space-huge);
+    }
+
+    h1 + * {
+        margin-top: var(--space-large);
+    }
+    h2 + * {
+        margin-top: var(--space-medium);
+    }
+    h3 + * {
+        margin-top: var(--space-small);
+    }
+}

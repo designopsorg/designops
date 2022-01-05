@@ -1,8 +1,7 @@
 hr {
-    --color: var(--divider);
-
     color: var(--color);
-    height: 1px;
-    background-color: currentColor;
+    height: 0;
     border: 0;
+    border-top: 1px solid;
+    opacity: var(--opacity-muted);
 }

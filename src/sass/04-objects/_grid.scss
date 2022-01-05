@@ -22,3 +22,13 @@
 
 // Create .g-*, .gy-*, and .gx-* classes
 @include make-gaps();
+
+.page-grid {
+    @include media-breakpoint-up(desktop) {
+        --gap-x: var(--space-large);
+
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 0 var(--gap-x);
+    }
+}

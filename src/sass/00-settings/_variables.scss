@@ -1,24 +1,15 @@
-// Layout
-//
-// Set the max-width and specify the
-
-$layout: (
-    section-padding-x:      rem(32px),
-    layout-max-width:       rem(768px)
-) !default;
-
 // Spacing
 
-$spacer:                rem(4px) !default;
+$spacer:                rem(8px);
 $spacers: (
     space-none:         0,
     space-tiny:         $spacer,
     space-small:        $spacer * 2,
     space-medium:       $spacer * 3,
     space-large:        $spacer * 4,
-    space-huge:         $spacer * 8,
-    space-gigantic:     $spacer * 10
-) !default;
+    space-huge:         $spacer * 5,
+    space-giant:        $spacer * 8
+);
 
 // Breakpoints
 
@@ -27,20 +18,25 @@ $grid-breakpoints: (
     tablet:     700px,
     laptop:     900px,
     desktop:    1200px
-) !default;
+);
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 @include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
 
-// Grid columns
-//
-// Set the number of columns and specify the width of the gutters.
+// Layout
 
-$row-col:                     12 !default;
-$grid-cols:                   6 !default;
-$gap-default:                 none !default; // use spacer token
+$layout: (
+    container-max-width:  rem(1216px),
+    container-margin-x:  var(--space-huge)
+);
 
-$gaps: $spacers !default;
+// Grid
+
+$row-cols:      12;
+$grid-cols:     4;
+$gap-default:   none; // use spacer token
+
+$gaps: $spacers;
 
 // Typography
 
@@ -52,34 +48,34 @@ $font-weight-bold:      700;
 $font-weight-black:     800;
 
 $font-size-root:        null;
-$font-weight-base:      $font-weight-regular;
 $font-family-base:      -apple-system, blinkmacsystemfont, avenir next, avenir, segoe ui, helvetica neue, helvetica, ubuntu, roboto, noto, arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
-$font-family-base-v:    'Karla', -apple-system, blinkmacsystemfont, avenir next, avenir, segoe ui, helvetica neue, helvetica, ubuntu, roboto, noto, arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+$font-family-base-v:    'Rubik', -apple-system, blinkmacsystemfont, avenir next, avenir, segoe ui, helvetica neue, helvetica, ubuntu, roboto, noto, arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
 
 $headings-font-family:  -apple-system, blinkmacsystemfont, avenir next, avenir, segoe ui, helvetica neue, helvetica, ubuntu, roboto, noto, arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
 $headings-font-family-v: 'Rubik', -apple-system, blinkmacsystemfont, avenir next, avenir, segoe ui, helvetica neue, helvetica, ubuntu, roboto, noto, arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
 $headings-font-style:   normal;
 
+$font-family-quote:     'PT Serif', serif;
 $font-family-code:      menlo, consolas, monaco, liberation mono, lucida console, monospace;
 $code-font-size:        1em;
 
 // Typo tokens
 $font-scale: (
-    text-caption: (
+    text-small: (
         null: (
-            font-size:      15,
-            line-height:    16
+            font-size:      16,
+            line-height:    24
         )
     ),
     text-body: (
         null: (
             font-size:      16,
-            line-height:    24
+            line-height:    24,
+            font-weight:    $font-weight-light
         ),
         tablet: (
-            font-size:      18,
-            line-height:    28,
-            letter-spacing: -.01em
+            font-size:      20,
+            line-height:    32
         )
     ),
     text-lead: (
@@ -90,65 +86,160 @@ $font-scale: (
         ),
         tablet: (
             font-size:      28,
-            line-height:    44,
-            letter-spacing: -.01em
+            line-height:    40
+        )
+    ),
+    text-quote: (
+        null: (
+            font-size:      20,
+            line-height:    28
+        ),
+        tablet: (
+            font-size:      22,
+            line-height:    32
         )
     ),
     heading-small: (
         null: (
             font-size:      20,
             line-height:    24,
-            font-weight:    $font-weight-medium
-        ),
-        tablet: (
-            font-size:      24,
-            line-height:    28
+            font-weight:    $font-weight-semibold
         )
     ),
     heading-medium: (
         null: (
             font-size:      24,
             line-height:    28,
-            font-weight:    $font-weight-medium
+            font-weight:    $font-weight-semibold
         ),
         tablet: (
-            font-size:      32,
-            line-height:    36
+            font-size:      28,
+            line-height:    32
         )
     ),
     heading-large: (
         null: (
             font-size:      40,
             line-height:    40,
-            font-weight:    $font-weight-medium
+            font-weight:    $font-weight-semibold
         ),
         tablet: (
-            font-size:      52,
+            font-size:      40,
+            line-height:    48
+        )
+    ),
+    display-small: (
+        null: (
+            font-size:      40,
+            line-height:    44,
+            font-weight:    $font-weight-semibold
+        ),
+        tablet: (
+            font-size:      56,
             line-height:    60
         )
+    ),
+    display-medium: (
+        null: (
+            font-size:      56,
+            line-height:    56,
+            font-weight:    $font-weight-semibold
+        ),
+        tablet: (
+            font-size:      80,
+            line-height:    80
+        )
+    ),
+    display-large: (
+        null: (
+            font-size:      56,
+            line-height:    56,
+            font-weight:    $font-weight-semibold
+        ),
+        tablet: (
+            font-size:      113,
+            line-height:    96
+        )
+    ),
+    display-xlarge: (
+        null: (
+            font-size:      56,
+            line-height:    56,
+            font-weight:    $font-weight-black
+        ),
+        tablet: (
+            font-size:      160,
+            line-height:    136
+        )
     )
-) !default;
+);
 
-$ui-colors: (
-    color-white:          hsl(0, 0%, 100%),
-    bg-primary:           linear-gradient(122.54deg, #FFF8EE 4.58%, #FAEDEB 16.08%, #FBECF2 39.96%, #F5F2FD 60.74%, #E6F0FD 89.48%),
-    bg-subtle:            hsl(0, 0%, 12%),
-    bg-accent:            hsl(43, 100%, 59%),
-    text-primary:         hsla(265, 80%, 22%, .9),
-    text-subtle:          hsla(265, 80%, 22%, .77),
-    text-muted:           hsla(35, 100%, 97%, .64),
-    text-accent:          hsl(265, 83%, 57%),
-    link-color:           var(--text-primary),
-    link-border-color:    hsl(19, 97%, 51%),
-    divider:              hsla(35, 100%, 97%, .08),
-    text-primary-reverse: hsla(258, 63%, 8%, .96),
-) !default;
+// Theme tokens
+
+$theme-light: (
+    color-primary:                  #f7f7f7,
+    color-primary-inverted:         #292929,
+    color-secondary:                #FFC342,
+    color-accent:                   #FF4365,
+    gradient-primary:               radial-gradient(140% 120% at 0% 0%, #fffbf5 5%, #f5fdff 26%, #faf5ff 84%, #ebf4ff 98%),
+    body-bg:                        var(--color-primary),
+    highlight-bg:                   #99D274,
+    text-primary:                   var(--color-primary-inverted),
+    text-primary-inverted:          var(--color-primary),
+    text-secondary:                 var(--color-secondary),
+    text-accent:                    var(--color-accent),
+    action-color:                   var(--text-primary),
+    action-color-accent:            var(--color-accent),
+    action-surface-color:           var(--text-primary),
+    action-surface-bg:              var(--color-secondary),
+    surface-bg:                     hsla(0, 0%, 100%, .72),
+    surface-shadow-color:           '265, 100%, 52%',
+    surface-shadow-small:           '1px 1px 1px hsla(var(--surface-shadow-color), .12)',
+    surface-shadow:                 '1px 1px 1px hsla(var(--surface-shadow-color), .12), 2px 3px 3px hsla(var(--surface-shadow-color), .1), 3px 6px 6px hsla(var(--surface-shadow-color), .04)',
+    navbar-bg:                      hsla(0, 0%, 97%, .9),
+    opacity-subtle:                 .48,
+    opacity-muted:                  .24,
+    opacity-watermark:              .08,
+);
+
+$theme-dark: (
+    color-primary:                  hsl(270, 6%, 13%),
+    color-primary-inverted:         #9BC4CB,
+    color-secondary:                hsl(44, 100%, 52%),
+    color-accent:                   hsl(44, 100%, 52%),
+    gradient-primary:               radial-gradient(140% 120% at 0% 0%, #fffbf5 5%, #f5fdff 26%, #faf5ff 84%, #ebf4ff 98%),
+    body-bg:                        var(--color-primary),
+    highlight-bg:                   hsl(83, 52%, 18%),
+    text-primary:                   var(--color-primary-inverted),
+    text-primary-inverted:          var(--color-primary),
+    text-secondary:                 var(--color-secondary),
+    text-accent:                    var(--color-accent),
+    action-color:                   var(--text-primary),
+    action-color-accent:            var(--color-accent),
+    action-surface-color:           var(--text-primary-inverted),
+    action-surface-bg:              var(--color-accent),
+    surface-bg:                     hsla(0, 0%, 100%, .72),
+    surface-shadow-color:           '265, 100%, 52%',
+    surface-shadow-small:           0,
+    surface-shadow:                 0,
+    navbar-bg:                      hsla(270, 6%, 13%, .9),
+    opacity-subtle:                 .4,
+    opacity-muted:                  .16,
+    opacity-watermark:              .06,
+);
+
+// Border radius
+
+$border-radius: (
+    surface-radius-small:    rem(3px),
+    surface-radius:          var(--space-small)
+);
 
 // Utilities
 
 $enable-important-utilities:    false;
 
-$utilities: () !default;
+$utilities: ();
 
 $utilities: map-merge(
     (
@@ -234,8 +325,8 @@ $utilities: map-merge(
             property: align-self,
             values: (
                 auto: auto,
-                start: flex-start,
-                end: flex-end,
+                start: start,
+                end: end,
                 center: center,
                 baseline: baseline,
                 stretch: stretch,
@@ -274,46 +365,46 @@ $utilities: map-merge(
             )
         ),
         "margin": (
-        responsive: true,
-        property: margin,
-        class: m,
-        values: map-merge($spacers, (auto: auto))
+            responsive: true,
+            property: margin,
+            class: m,
+            values: map-merge($spacers, (auto: auto))
         ),
         "margin-x": (
-        responsive: true,
-        property: margin-right margin-left,
-        class: mx,
-        values: map-merge($spacers, (auto: auto))
+            responsive: true,
+            property: margin-right margin-left,
+            class: mx,
+            values: map-merge($spacers, (auto: auto))
         ),
         "margin-y": (
-        responsive: true,
-        property: margin-top margin-bottom,
-        class: my,
-        values: map-merge($spacers, (auto: auto))
+            responsive: true,
+            property: margin-top margin-bottom,
+            class: my,
+            values: map-merge($spacers, (auto: auto))
         ),
         "margin-top": (
-        responsive: true,
-        property: margin-top,
-        class: mt,
-        values: map-merge($spacers, (auto: auto))
+            responsive: true,
+            property: margin-top,
+            class: mt,
+            values: map-merge($spacers, (auto: auto))
         ),
         "margin-right": (
-        responsive: true,
-        property: margin-right,
-        class: mr,
-        values: map-merge($spacers, (auto: auto))
+            responsive: true,
+            property: margin-right,
+            class: mr,
+            values: map-merge($spacers, (auto: auto))
         ),
         "margin-bottom": (
-        responsive: true,
-        property: margin-bottom,
-        class: mb,
-        values: map-merge($spacers, (auto: auto))
+            responsive: true,
+            property: margin-bottom,
+            class: mb,
+            values: map-merge($spacers, (auto: auto))
         ),
         "margin-left": (
-        responsive: true,
-        property: margin-left,
-        class: ml,
-        values: map-merge($spacers, (auto: auto))
+            responsive: true,
+            property: margin-left,
+            class: ml,
+            values: map-merge($spacers, (auto: auto))
         ),
     ),
     $utilities
