@@ -1,0 +1,28 @@
+[
+    {
+        "description": "Learn how to structure the library's components and publish without breaking changes.",
+        "video_id": "yJmRglpvP8Q",
+        "authors": [ 
+            {
+                "name": "Jan Toman",
+                "url": "https://twitter.com/HonzaTmn"
+            }
+        ],
+        "event": "Schema 2021"
+    },
+    {
+        "description": "A deep overview of how Netflix's core team manages the system in Figma.",
+        "video_id": "nFe6US9aA_U",
+        "authors": [
+            {
+                "name": "Jen Yee",
+                "url": "https://twitter.com/jenyee_"
+            },
+            {
+                "name": "Luca Orio",
+                "url": "https://twitter.com/lucaorio_"
+            }
+        ],
+        "event": "Schema 2021"
+    }
+]
