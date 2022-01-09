@@ -1,6 +1,6 @@
 .hero-title {
     transform-origin: center;
-    animation: animate-enter .6s cubic-bezier(.12,.74,.79,.94) .5s backwards;
+    animation: animate-enter .6s cubic-bezier(.12,.74,.79,.94) backwards;
     will-change: transform;
 }
 
