@@ -1,0 +1,19 @@
+.video {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-medium) var(--space-huge);
+    align-items: start;
+
+}
+
+.video-figure {
+    width: min(rem(320px), 100%);
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    box-shadow: var(--surface-shadow-medium);
+    border-radius: var(--surface-radius-medium);
+}
+
+.video-body {
+    flex: 1 0 min(rem(360px), 100%);
+}
