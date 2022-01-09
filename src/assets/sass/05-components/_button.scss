@@ -4,21 +4,16 @@
     --padding-x: var(--space-medium);
     --color: var(--action-surface-color);
     --bg: var(--action-surface-bg);
-    --border-color: transparent;
     --border-radius: var(--surface-radius-small);
     --box-shadow: var(--surface-shadow-small);
-    --transform: none;
     --opacity: 1;
     --hover-color: var(--color);
     --hover-bg: var(--bg);
-    --hover-border-color: var(--border-color);
     --hover-box-shadow: var(--box-shadow);
     --hover-opacity: 1;
     --active-color: var(--color);
     --active-bg: var(--bg);
-    --active-border-color: var(--border-color);
     --active-box-shadow: var(--box-shadow);
-    --active-transform: none;
     --active-opacity: 1;
 
     display: inline-flex;
@@ -33,22 +28,17 @@
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
-    background: var(--bg);
-    border-color: var(--border-color);
-    border-style: solid;
+    background-color: var(--bg);
     border-width: 0;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
-    transform: var(--transform);
     opacity: var(--opacity);
     cursor: pointer;
-    transition: background .15s ease-in, color .15s ease-in;
     user-select: none;
 
     &:hover {
         color: var(--hover-color);
         background: var(--hover-bg);
-        border-color: var(--hover-border-color);
         box-shadow: var(--hover-box-shadow);
         text-decoration: none;
         opacity: var(--hover-opacity);
@@ -57,9 +47,7 @@
     &:active {
         color: var(--active-color);
         background: var(--active-bg);
-        border-color: var(--active-border-color);
         box-shadow: var(--active-box-shadow);
-        transform: var(--active-transform);
         opacity: var(--active-opacity);
     }
 
@@ -69,10 +57,6 @@
         opacity: var(--opacity-muted);
         pointer-events: none;
     }
-
-    .icon {
-        transition: all .15s ease-in;
-    }
 }
 
 // Subtle button
@@ -80,21 +64,14 @@
 .button-subtle {
     --color: var(--text-primary);
     --bg: none;
-    --border-color: transparent;
     --box-shadow: none;
-    --transform: none;
     --opacity: var(--opacity-subtle);
     --hover-color: var(--text-primary);
     --hover-bg: none;
-    --hover-border-color: transparent;
     --hover-box-shadow: none;
     --active-color: var(--text-primary);
     --active-bg: none;
-    --active-border-color: transparent;
     --active-box-shadow: none;
-    --active-transform: none;
-
-    transition: opacity .15s ease-in;
 }
 
 // Link button
@@ -103,7 +80,6 @@
     --padding-x: 0;
     --color: var(--action-color);
     --bg: none;
-    --border-color: transparent;
     --box-shadow: none;
     --transform: none;
 
@@ -111,7 +87,6 @@
     text-decoration-color: var(--action-color-accent);
     text-decoration-thickness: .08em;
     text-underline-offset: 2px;
-    transition: color .15s ease-in, text-decoration-color .15s ease-in;
 
     &:hover {
         text-decoration: underline;
@@ -135,62 +110,5 @@
     // Vertically space out multiple block buttons
     + .button-block {
         margin-top: var(--space-small);
-    }
-}
-
-// Social button
-
-.button-circle {
-    --padding-y: var(--space-large);
-    --padding-x: var(--space-large);
-    --color: var(--text-primary);
-    --bg: none;
-    --border-radius: 0;
-    --hover-color: var(--text-primary);
-
-    position: relative;
-    border-width: 0;
-    transition: none;
-
-    .icon {
-        --size: #{rem(28px)};
-        margin: 0 !important;
-        transform: scale(.7143);
-        transition: transform .2s cubic-bezier(.175, .885, .32, 1.275) .2s, color .01s ease-in .3s;
-        will-change: transform;
-    }
-
-    .icon-bg {
-        position: absolute;
-        right: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        transform: scale(.001);
-        opacity: .001;
-        transition: transform .3s cubic-bezier(.6, .04, .98, .335), opacity .04s ease-in .26s;
-        will-change: transform;
-        fill: var(--hover-shape-bg);
-    }
-
-    @include media-breakpoint-up(laptop) {
-        --hover-color: var(--text-primary-reverse);
-        --hover-shape-bg: var(--text-primary);
-        --active-color: var(--hover-color);
-
-        &:hover,
-        &:active {
-
-            .icon {
-                transform: scale(1);
-                transition: transform .28s cubic-bezier(.175, .885, .32, 1.275) .04s;
-            }
-
-            .icon-bg {
-                transform: scale(1);
-                opacity: 1;
-                transition: transform .32s cubic-bezier(.175, .885, .32, 1.275);
-            }
-        }
     }
 }
