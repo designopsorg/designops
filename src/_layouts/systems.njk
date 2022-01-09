@@ -1,0 +1,33 @@
+---
+layout: base
+---
+
+<section>
+    <div class="container page-grid">
+        <div class="display-large text-uppercase watermark mb-space-giant" style="grid-column: 3 / 13; user-select: none;">Systems</div>
+
+        <nav class="align-self-start mb-space-huge" style="grid-column: 1 / 3; position:sticky; top:120px;">
+            <ul class="nav">
+            {% for item in collections.systems | eleventyNavigation %}
+                {% if item.url %}
+                    {% set isCurrent = (item.url == page.url) %}
+                    {% set isParent = item.url != '/' and item.url in page.url %}
+                    <li>
+                        <a 
+                            href="{% if isCurrent %}#main{% else %}{{ item.url | url }}{% endif %}" 
+                            class="nav-link{% if isCurrent %} selected{% endif %}" 
+                            {% if isCurrent %}aria-current="page"{% endif %}>
+                            {{ item.title }}
+                        </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+            </ul>
+        </nav>
+
+        <article class="format" role="article" style="grid-column: 3 / 11;">
+            {{ content | safe}}
+        </article>
+
+    </div>
+</section>
