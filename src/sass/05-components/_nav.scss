@@ -1,5 +1,6 @@
 .nav {
     --gap: 0;
+    --padding-y: 0;
 
     display: flex;
     flex-direction: column;
@@ -26,7 +27,7 @@
         font-family: var(--font-family-headings-v);
     }
     @include font-scale(text-small);
-    font-weight: $font-weight-semibold;
+    font-weight: $font-weight-medium;
     color: var(--color);
     border-radius: var(--surface-radius-small);
     text-decoration: none;
