@@ -19,8 +19,5 @@ a.decoration-none {
 }
 
 a:not([href]):not([class]) {
-    &,
-    &:hover {
-        --color: var(--);
-    }
+    --color: inherit;
 }

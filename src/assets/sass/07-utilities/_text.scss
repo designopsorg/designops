@@ -7,15 +7,6 @@
     }
 }
 
-[class*="heading-"] {
-    --font-family: var(--font-family-headings);
-    @supports (font-variation-settings: normal) {
-        --font-family: var(--font-family-headings-v);
-    }
-
-    @extend %heading;
-}
-
 // Text color
 .text-primary {
     color: var(--text-primary);

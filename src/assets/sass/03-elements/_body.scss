@@ -5,11 +5,7 @@ body {
     @include font-scale(text-body);
     color: var(--text-primary);
     font-family: var(--font-family-base);
-    @supports (font-variation-settings: normal) {
-        font-family: var(--font-family-base-v);
-    }
     text-align: left;
     text-rendering: optimizeLegibility;
     background: var(--body-bg);
-    background-attachment: fixed;
 }
