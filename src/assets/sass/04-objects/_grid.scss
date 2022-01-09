@@ -9,16 +9,16 @@
 @include make-grid-columns();
 
 // Create .row object
-.row {
-    @include make-row();
-
-    > * {
-        @include make-row-col-ready();
-    }
-}
+//.row {
+//    @include make-row();
+//
+//    > * {
+//        @include make-row-col-ready();
+//    }
+//}
 
 // Create .row > .col-* children
-@include make-row-columns();
+//@include make-row-columns();
 
 // Create .g-*, .gy-*, and .gx-* classes
 @include make-gaps();
