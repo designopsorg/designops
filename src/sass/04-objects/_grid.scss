@@ -24,7 +24,7 @@
 @include make-gaps();
 
 .page-grid {
-    @include media-breakpoint-up(desktop) {
+    @include media-breakpoint-up(laptop) {
         --gap-x: var(--space-large);
 
         display: grid;

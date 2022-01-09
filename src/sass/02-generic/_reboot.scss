@@ -46,11 +46,10 @@ h6 {
     overflow-wrap: break-word;
 }
 
-#root, #__next {
-    isolation: isolate;
+ul,
+ol {
+    padding: 0;
 }
-
-// Code
 
 pre,
 code,
@@ -61,36 +60,23 @@ samp {
 }
 
 pre {
---margin-bottom: var(--space-large);
---color: var(--pre-color);
---bg: var(--pre-bg);
+    --margin-bottom: var(--space-large);
+    --color: var(--pre-color);
+    --bg: var(--pre-bg);
 
-display: block;
-margin-top: 0;
-margin-bottom: var(--margin-bottom);
-overflow: auto;
-color: var(--color);
-font-size: $code-font-size;
-background: var(--bg);
+    display: block;
+    margin-top: 0;
+    margin-bottom: var(--margin-bottom);
+    overflow: auto;
+    color: var(--color);
+    font-size: $code-font-size;
+    background: var(--bg);
+}
 
-// Account for some code outputs that place code tags in pre tags
 code {
     color: inherit;
     font-size: inherit;
     word-break: normal;
-}
-}
-
-code {
---color: var(--code-color);
-
-color: var(--color);
-font-size: $code-font-size;
-word-wrap: break-word;
-
-a > & {
-    color: inherit;
-}
 }
 
 table {
@@ -123,8 +109,6 @@ border-style: solid;
 border-width: 0;
 }
 
-
-
 output {
 display: inline-block;
 }
@@ -143,5 +127,5 @@ vertical-align: baseline;
 }
 
 [hidden] {
-display: none !important;
+    display: none;
 }

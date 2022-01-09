@@ -27,8 +27,7 @@
     justify-content: center;
     padding: var(--padding-y) var(--padding-x);
     @include font-scale(text-body);
-    line-height: var(--space-medium);
-    font-weight: $font-weight-regular !important;
+    line-height: rem(24px);
     color: var(--color);
     white-space: nowrap;
     text-align: center;
@@ -69,6 +68,10 @@
     fieldset:disabled & {
         opacity: var(--opacity-muted);
         pointer-events: none;
+    }
+
+    .icon {
+        transition: all .15s ease-in;
     }
 }
 

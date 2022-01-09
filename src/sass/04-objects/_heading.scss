@@ -1,0 +1,16 @@
+.heading {
+    position: relative;
+
+    .anchor {
+        position: absolute;
+        top: 6%;
+        left: calc(var(--space-large) * -1);
+        @include font-scale(text-body);
+        line-height: 1;
+        opacity: var(--opacity-subtle);
+
+        [hidden] {
+            display: block;
+        }
+    }
+}

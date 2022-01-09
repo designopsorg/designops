@@ -1,8 +1,11 @@
+@use "sass:math";
+
 // Spacing
 
 $spacer:                rem(8px);
 $spacers: (
     space-none:         0,
+    space-xtiny:        math.div($spacer, 2),
     space-tiny:         $spacer,
     space-small:        $spacer * 2,
     space-medium:       $spacer * 3,
@@ -69,8 +72,8 @@ $font-scale: (
     ),
     text-body: (
         null: (
-            font-size:      16,
-            line-height:    24,
+            font-size:      18,
+            line-height:    30,
             font-weight:    $font-weight-light
         ),
         tablet: (
@@ -80,8 +83,8 @@ $font-scale: (
     ),
     text-lead: (
         null: (
-            font-size:      20,
-            line-height:    28,
+            font-size:      24,
+            line-height:    36,
             font-weight:    $font-weight-light
         ),
         tablet: (
@@ -103,14 +106,14 @@ $font-scale: (
         null: (
             font-size:      20,
             line-height:    24,
-            font-weight:    $font-weight-semibold
+            font-weight:    $font-weight-medium
         )
     ),
     heading-medium: (
         null: (
             font-size:      24,
             line-height:    28,
-            font-weight:    $font-weight-semibold
+            font-weight:    $font-weight-medium
         ),
         tablet: (
             font-size:      28,
@@ -121,7 +124,7 @@ $font-scale: (
         null: (
             font-size:      40,
             line-height:    40,
-            font-weight:    $font-weight-semibold
+            font-weight:    $font-weight-medium
         ),
         tablet: (
             font-size:      40,
@@ -132,7 +135,7 @@ $font-scale: (
         null: (
             font-size:      40,
             line-height:    44,
-            font-weight:    $font-weight-semibold
+            font-weight:    $font-weight-medium
         ),
         tablet: (
             font-size:      56,
@@ -143,7 +146,7 @@ $font-scale: (
         null: (
             font-size:      56,
             line-height:    56,
-            font-weight:    $font-weight-semibold
+            font-weight:    $font-weight-medium
         ),
         tablet: (
             font-size:      80,
@@ -152,19 +155,19 @@ $font-scale: (
     ),
     display-large: (
         null: (
-            font-size:      56,
-            line-height:    56,
-            font-weight:    $font-weight-semibold
+            font-size:      72,
+            line-height:    72,
+            font-weight:    $font-weight-black
         ),
         tablet: (
-            font-size:      113,
-            line-height:    96
+            font-size:      112,
+            line-height:    104
         )
     ),
     display-xlarge: (
         null: (
-            font-size:      56,
-            line-height:    56,
+            font-size:      112,
+            line-height:    96,
             font-weight:    $font-weight-black
         ),
         tablet: (
@@ -177,34 +180,34 @@ $font-scale: (
 // Theme tokens
 
 $theme-light: (
-    color-primary:                  #f7f7f7,
-    color-primary-inverted:         #292929,
-    color-secondary:                #FFC342,
-    color-accent:                   #FF4365,
-    gradient-primary:               radial-gradient(140% 120% at 0% 0%, #fffbf5 5%, #f5fdff 26%, #faf5ff 84%, #ebf4ff 98%),
+    color-primary:                  #fafeff,
+    color-secondary:                hsl(270, 6%, 24%),
+    color-tertiary:                 #ffc338,
+    color-accent:                   #d04356,
     body-bg:                        var(--color-primary),
-    highlight-bg:                   #99D274,
-    text-primary:                   var(--color-primary-inverted),
+    highlight-bg:                   var(--color-tertiary),
+    text-primary:                   var(--color-secondary),
     text-primary-inverted:          var(--color-primary),
     text-secondary:                 var(--color-secondary),
     text-accent:                    var(--color-accent),
     action-color:                   var(--text-primary),
     action-color-accent:            var(--color-accent),
-    action-surface-color:           var(--text-primary),
-    action-surface-bg:              var(--color-secondary),
+    action-surface-color:           var(--text-primary-inverted),
+    action-surface-bg:              var(--color-accent),
     surface-bg:                     hsla(0, 0%, 100%, .72),
-    surface-shadow-color:           '265, 100%, 52%',
+    surface-shadow-color:           '0, 0%, 16%',
     surface-shadow-small:           '1px 1px 1px hsla(var(--surface-shadow-color), .12)',
-    surface-shadow:                 '1px 1px 1px hsla(var(--surface-shadow-color), .12), 2px 3px 3px hsla(var(--surface-shadow-color), .1), 3px 6px 6px hsla(var(--surface-shadow-color), .04)',
-    navbar-bg:                      hsla(0, 0%, 97%, .9),
-    opacity-subtle:                 .48,
+    surface-shadow-medium:          '1px 1px 1px hsla(var(--surface-shadow-color), .12), 2px 3px 3px hsla(var(--surface-shadow-color), .1), 3px 6px 6px hsla(var(--surface-shadow-color), .04)',
+    navbar-bg:                      hsla(192, 100%, 99%, .9),
+    navbar-border-color:            hsla(237, 42%, 37%, var(--opacity-watermark)),
+    opacity-subtle:                 .64,
     opacity-muted:                  .24,
     opacity-watermark:              .08,
 );
 
 $theme-dark: (
-    color-primary:                  hsl(270, 6%, 13%),
-    color-primary-inverted:         #9BC4CB,
+    color-primary:                  #211f23,
+    color-primary-inverted:         hsl(188, 31%, 81%),
     color-secondary:                hsl(44, 100%, 52%),
     color-accent:                   hsl(44, 100%, 52%),
     gradient-primary:               radial-gradient(140% 120% at 0% 0%, #fffbf5 5%, #f5fdff 26%, #faf5ff 84%, #ebf4ff 98%),
@@ -221,9 +224,10 @@ $theme-dark: (
     surface-bg:                     hsla(0, 0%, 100%, .72),
     surface-shadow-color:           '265, 100%, 52%',
     surface-shadow-small:           0,
-    surface-shadow:                 0,
+    surface-shadow-medium:          0,
     navbar-bg:                      hsla(270, 6%, 13%, .9),
-    opacity-subtle:                 .4,
+    navbar-border-color:            hsla(189, 32%, 70%, var(--opacity-watermark)),
+    opacity-subtle:                 .48,
     opacity-muted:                  .16,
     opacity-watermark:              .06,
 );
@@ -232,7 +236,8 @@ $theme-dark: (
 
 $border-radius: (
     surface-radius-small:    rem(3px),
-    surface-radius:          var(--space-small)
+    surface-radius-medium:   rem(12px),
+    surface-radius-large:    rem(32px)
 );
 
 // Utilities
@@ -347,9 +352,10 @@ $utilities: map-merge(
             ),
         ),
         "text-align": (
+            responsive: true,
             property: text-align,
             class: text,
-            values: center right
+            values: left center right
         ),
         "text-transform": (
             property: text-transform,

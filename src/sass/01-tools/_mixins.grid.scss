@@ -151,11 +151,15 @@
                 .g#{$infix}-#{$key},
                 .gx#{$infix}-#{$key} {
                     --gap-x: var(--#{$key});
+
+                    column-gap: var(--gap-x);
                 }
 
                 .g#{$infix}-#{$key},
                 .gy#{$infix}-#{$key} {
                     --gap-y: var(--#{$key});
+
+                    row-gap: var(--gap-y);
                 }
             }
         }
