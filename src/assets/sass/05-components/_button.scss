@@ -93,6 +93,8 @@
     --active-border-color: transparent;
     --active-box-shadow: none;
     --active-transform: none;
+
+    transition: opacity .15s ease-in;
 }
 
 // Link button
