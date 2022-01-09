@@ -42,7 +42,7 @@
     transform: var(--transform);
     opacity: var(--opacity);
     cursor: pointer;
-    transition: all .15s ease-in;
+    transition: background .15s ease-in, color .15s ease-in;
     user-select: none;
 
     &:hover {
@@ -109,6 +109,7 @@
     text-decoration-color: var(--action-color-accent);
     text-decoration-thickness: .08em;
     text-underline-offset: 2px;
+    transition: color .15s ease-in, text-decoration-color .15s ease-in;
 
     &:hover {
         text-decoration: underline;
