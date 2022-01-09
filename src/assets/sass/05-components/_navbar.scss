@@ -8,6 +8,11 @@
         top: 0;
         left: 0;
         width: 100%;
+
+        .navbar-state:checked ~ & {
+            background-color: var(--navbar-bg-open);
+            box-shadow: var(--surface-shadow-small);
+        }
     }
 }
 
@@ -21,7 +26,6 @@
     @extend %container;
     padding-top: var(--padding-y);
     padding-bottom: var(--padding-y);
-    border-bottom: 1px solid var(--navbar-border-color);
 }
 
 .navbar-header {
@@ -40,12 +44,12 @@
 
 .navbar-logo {
     --color: var(--text-primary);
-    
+
     text-decoration: none;
 
     .logo {
         width: auto;
-        height: rem(24px);
+        height: rem(28px);
     }
 }
 
@@ -73,7 +77,6 @@
 }
 
 .navbar-nav .nav-link {
-    --opacity: 1;
     
     @include media-breakpoint-down(laptop) {
 
