@@ -49,8 +49,8 @@ let markdownLibrary = markdownIt({
 
 module.exports = function  (eleventyConfig) {
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
-    eleventyConfig.addWatchTarget("./src/sass/");
-    eleventyConfig.addPassthroughCopy("./src/assets/");
+    eleventyConfig.addWatchTarget("./src/assets/");
+    eleventyConfig.addPassthroughCopy("./src/assets/images/");
     eleventyConfig.setLibrary("md", markdownLibrary);
     eleventyConfig.setDataDeepMerge(true);
     

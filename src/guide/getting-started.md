@@ -1,5 +1,6 @@
 ---
 title: Getting started with Design Operations
+date: 2022-01-02
 navbarTitle: Guide
 tags: navbar
 eleventyNavigation:

@@ -1,14 +1,14 @@
 .navbar {
-    --bg: var(--navbar-bg);
-
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: var(--bg);
-    backdrop-filter: saturate(180%) blur(12px);
+    background-color: var(--navbar-bg);
     user-select: none;
     z-index: 100;
+
+    @include media-breakpoint-down(laptop) {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
 }
 
 .navbar-state {
@@ -56,7 +56,6 @@
 
         display: none;
         padding: var(--padding-y) var(--padding-x);
-        //text-align: center;
 
         .navbar-state:checked ~ .navbar & {
             display: flex;
@@ -76,9 +75,9 @@
     --opacity: 1;
     
     @include media-breakpoint-down(laptop) {
-        --opacity: 1;
-        
-        @include font-scale(heading-small);
+
+        display: flex;
+        justify-content: center;
     }
     
     @include media-breakpoint-up(laptop) {
