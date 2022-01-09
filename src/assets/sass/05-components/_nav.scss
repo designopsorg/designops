@@ -36,12 +36,12 @@
 
     &:hover,
     &:focus {
-        --color: var(--hover-color);
+        color: var(--hover-color);
         opacity: var(--hover-opacity);
     }
 
     &.selected {
-        --color: var(--selected-color);
+        color: var(--selected-color);
         background-color: var(--selected-bg);
         opacity: var(--selected-opacity);
     }
