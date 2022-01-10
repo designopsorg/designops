@@ -149,8 +149,8 @@ $font-scale: (
     ),
     display-large: (
         null: (
-            font-size:      72,
-            line-height:    72,
+            font-size:      56,
+            line-height:    56,
             font-weight:    $font-weight-black
         ),
         tablet: (
@@ -174,11 +174,11 @@ $font-scale: (
 // Theme tokens
 
 $theme-light: (
-    color-primary:                  #F2F2F2,
+    color-primary:                  #fafafa,
     color-secondary:                #292b2e,
-    color-accent:                   #F95738,
+    color-accent:                   #ffbe0a,
     body-bg:                        var(--color-primary),
-    highlight-bg:                   #fae1a7,
+    highlight-bg:                   #fae4a8,
     text-primary:                   var(--color-secondary),
     text-primary-inverted:          var(--color-primary),
     text-secondary:                 var(--color-secondary),
