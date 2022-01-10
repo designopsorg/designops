@@ -1,21 +1,18 @@
 .hero {
-
-    padding: var(--padding-y) var(--padding-x);
+    padding: var(--padding);
     background-color: var(--color-accent);
 
     @include media-breakpoint-down(tablet) {
         --container-margin-x: var(--space-tiny);
-        --padding-y: var(--space-huge);
-        --padding-x: var(--space-medium);
+        --padding: var(--space-huge) var(--space-medium) var(--space-medium);
     }
 
     @include media-breakpoint-up(tablet) {
-        --padding-y: var(--space-giant);
-        --padding-x: var(--space-huge);
+        --padding: var(--space-giant) var(--space-huge) var(--space-huge);
     }
 
     @include media-breakpoint-up(laptop) {
-        --padding-x: 0;
+        --padding: var(--space-giant) 0;
     }
 }
 
@@ -27,19 +24,19 @@
 
 .hero-description {
     transform-origin: center;
-    animation: animate-fade .6s cubic-bezier(.12,.74,.79,.94) .8s backwards;
+    animation: animate-fade .6s cubic-bezier(.12,.74,.79,.94) 1s backwards;
     will-change: transform
 }
 
 .hero-author {
     transform-origin: center;
-    animation: animate-fade .6s cubic-bezier(.12,.74,.79,.94) .8s backwards;
+    animation: animate-fade .6s cubic-bezier(.12,.74,.79,.94) 1.6s backwards;
     will-change: transform
 }
 
 .hero-tweet {
     transform-origin: center;
-    animation: animate-fade .3s cubic-bezier(.12,.74,.79,.94) 2.4s backwards;
+    animation: animate-fade .3s cubic-bezier(.12,.74,.79,.94) 2s backwards;
     will-change: transform
 }
 
