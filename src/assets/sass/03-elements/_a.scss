@@ -1,7 +1,7 @@
 a {
     --color: var(--action-color);
     --border-color: var(--action-color-accent);
-    --hover-color: var(--color);
+    --hover-color: var(--action-color-accent);
 
     color: var(--color);
     text-decoration-color: var(--border-color);
