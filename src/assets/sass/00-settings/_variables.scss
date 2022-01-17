@@ -174,12 +174,12 @@ $font-scale: (
 // Theme tokens
 
 $theme-light: (
-    color-primary:                  #FFFFFF,
-    color-secondary:                #292b2e,
-    color-tertiary:                 #ffbe0a,
-    color-accent:                   #e22a1d,
+    color-primary:                  hsl(0, 0%, 100%),
+    color-secondary:                hsl(216, 6%, 17%),
+    color-tertiary:                 hsl(44, 100%, 52%),
+    color-accent:                   hsl(4, 77%, 50%),
     body-bg:                        var(--color-primary),
-    highlight-bg:                   #fae4a8,
+    highlight-bg:                   hsl(44, 89%, 82%),
     text-primary:                   var(--color-secondary),
     text-primary-inverted:          var(--color-primary),
     text-secondary:                 var(--color-secondary),
@@ -200,12 +200,12 @@ $theme-light: (
 );
 
 $theme-dark: (
-    color-primary:                  #292b2e,
-    color-secondary:                #F2F2F2,
-    color-tertiary:                 #464749,
-    color-accent:                   #ffbe0a,
+    color-primary:                  hsl(216, 6%, 17%),
+    color-secondary:                hsl(0, 0%, 95%),
+    color-tertiary:                 hsl(44, 3%, 24%),
+    color-accent:                   hsl(44, 100%, 52%),
     body-bg:                        var(--color-primary),
-    highlight-bg:                   hsl(83, 52%, 18%),
+    highlight-bg:                   hsl(44, 3%, 24%),
     text-primary:                   var(--color-secondary),
     text-primary-inverted:          var(--color-primary),
     text-secondary:                 var(--color-secondary),
