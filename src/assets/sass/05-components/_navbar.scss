@@ -6,7 +6,6 @@
 
         .navbar-state:checked ~ & {
             background-color: var(--navbar-bg-open);
-            box-shadow: var(--surface-shadow-small);
         }
     }
 }
