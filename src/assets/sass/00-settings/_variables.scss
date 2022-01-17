@@ -174,9 +174,24 @@ $font-scale: (
 // Theme tokens
 
 $theme-light: (
-    color-primary:                  #fafafa,
+    color-primary:                  #FFFFFF,
     color-secondary:                #292b2e,
-    color-accent:                   #ffbe0a,
+    color-tertiary:                 #ffbe0a,
+    color-accent:                   #e22a1d,
+    gradient-primary:               radial-gradient(
+                                        circle,
+                                        hsl(4deg 77% 50%) 0%,
+                                        hsl(11deg 81% 50%) 16%,
+                                        hsl(17deg 86% 50%) 21%,
+                                        hsl(22deg 92% 49%) 25%,
+                                        hsl(27deg 98% 48%) 30%,
+                                        hsl(30deg 100% 48%) 34%,
+                                        hsl(33deg 100% 49%) 40%,
+                                        hsl(36deg 100% 49%) 47%,
+                                        hsl(39deg 100% 50%) 57%,
+                                        hsl(42deg 100% 50%) 72%,
+                                        hsl(44deg 100% 52%) 100%
+                                    ),
     body-bg:                        var(--color-primary),
     highlight-bg:                   #fae4a8,
     text-primary:                   var(--color-secondary),
@@ -191,8 +206,8 @@ $theme-light: (
     surface-shadow-color:           '0, 0%, 16%',
     surface-shadow-small:           '1px 1px 1px hsla(var(--surface-shadow-color), .12)',
     surface-shadow-medium:          '1px 1px 1px hsla(var(--surface-shadow-color), .12), 2px 3px 3px hsla(var(--surface-shadow-color), .1), 3px 6px 6px hsla(var(--surface-shadow-color), .04)',
-    navbar-bg:                      var(--body-bg),
-    navbar-bg-open:                 #fff,
+    navbar-bg:                      none,
+    navbar-bg-open:                 var(--color-tertiary),
     opacity-subtle:                 .64,
     opacity-muted:                  .24,
     opacity-watermark:              .08,
