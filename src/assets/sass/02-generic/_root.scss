@@ -28,3 +28,15 @@
         --#{$name}: #{$value};
     }
 }
+
+[data-theme=dark] {
+    @each $name, $value in $theme-dark {
+        --#{$name}: #{$value};
+    }
+}
+
+[data-theme=light] {
+    @each $name, $value in $theme-light {
+        --#{$name}: #{$value};
+    }
+}

@@ -1,29 +1,19 @@
 const SELECTORS = {
-    picker: '.js-themepicker',
-    toggleBtn: '.js-themepicker-toggle',
-    themeSelectBtn: '.js-themepicker-themeselect',
-    closeBtn: '.js-themepicker-close',
-    navToggleBtn: '.js-nav-toggle'
+    themeSelectBtn: '.js-themepicker-themeselect'
 }
 const CLASSES = {
-    open: 'is-open',
-    active: 'is-active'
+    active: 'selected'
 }
 const THEME_STORAGE_KEY = 'theme'
 
 class ThemePicker {
     constructor() {
-        this.isOpen = false
-        this.activeTheme = 'default'
+        this.activeTheme = 'light'
         this.hasLocalStorage = typeof Storage !== 'undefined'
         this.hasThemeColorMeta =
             !!document.querySelector('meta[name="theme-color"]') &&
             window.metaColors
 
-        this.picker = document.querySelector(SELECTORS.picker)
-        this.toggleBtn = document.querySelector(SELECTORS.toggleBtn)
-        this.navToggleBtn = document.querySelector(SELECTORS.navToggleBtn)
-        this.closeBtn = document.querySelector(SELECTORS.closeBtn)
         this.themeSelectBtns = Array.from(
             document.querySelectorAll(SELECTORS.themeSelectBtn)
         )
@@ -46,17 +36,8 @@ class ThemePicker {
     }
 
     bindEvents() {
-        this.toggleBtn.addEventListener('click', () => this.togglePicker())
-        this.closeBtn.addEventListener('click', () => this.togglePicker(false))
-
-        this.navToggleBtn.addEventListener('click', () => {
-            if (this.isOpen) {
-                this.togglePicker(false)
-            }
-        })
-
         this.themeSelectBtns.forEach((btn) => {
-            const id = btn.dataset.theme
+            const id = btn.dataset.themer
 
             if (id) {
                 btn.addEventListener('click', () => this.setTheme(id))
@@ -80,11 +61,11 @@ class ThemePicker {
 
     setActiveItem() {
         this.themeSelectBtns.forEach((btn) => {
-            btn.parentNode.classList.remove(CLASSES.active)
+            btn.classList.remove(CLASSES.active)
             btn.removeAttribute('aria-checked')
 
-            if (btn.dataset.theme === this.activeTheme) {
-                btn.parentNode.classList.add(CLASSES.active)
+            if (btn.dataset.themer === this.activeTheme) {
+                btn.classList.add(CLASSES.active)
                 btn.setAttribute('aria-checked', 'true')
             }
         })
@@ -104,31 +85,6 @@ class ThemePicker {
         }
 
         this.setActiveItem()
-    }
-
-    togglePicker(force) {
-        this.isOpen = typeof force === 'boolean' ? force : !this.isOpen
-
-        this.toggleBtn.setAttribute('aria-expanded', String(this.isOpen))
-
-        if (this.isOpen) {
-            this.picker.removeAttribute('hidden')
-            window.setTimeout(() => {
-                this.picker.classList.add(CLASSES.open)
-            }, 1)
-            this.themeSelectBtns[0].focus()
-        } else {
-            const transitionHandler = () => {
-                this.picker.removeEventListener(
-                    'transitionend',
-                    transitionHandler
-                )
-                this.picker.setAttribute('hidden', true)
-            }
-            this.picker.addEventListener('transitionend', transitionHandler)
-            this.picker.classList.remove(CLASSES.open)
-            this.toggleBtn.focus()
-        }
     }
 }
 
