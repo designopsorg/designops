@@ -1,6 +1,6 @@
 .hero {
     padding: var(--padding);
-    background-color: var(--color-accent);
+    //background-color: var(--color-tertiary);
 
     @include media-breakpoint-down(tablet) {
         --container-margin-x: var(--space-tiny);

@@ -1,13 +1,8 @@
 .navbar {
     background-color: var(--navbar-bg);
     user-select: none;
-    z-index: 100;
 
     @include media-breakpoint-down(laptop) {
-        position: sticky;
-        top: 0;
-        left: 0;
-        width: 100%;
 
         .navbar-state:checked ~ & {
             background-color: var(--navbar-bg-open);
@@ -49,7 +44,7 @@
 
     .logo {
         width: auto;
-        height: rem(24px);
+        height: rem(26px);
     }
 }
 
