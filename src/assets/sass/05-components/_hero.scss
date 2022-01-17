@@ -4,15 +4,15 @@
 
     @include media-breakpoint-down(tablet) {
         --container-margin-x: var(--space-tiny);
-        --padding: var(--space-huge) var(--space-medium) var(--space-medium);
+        --padding: 20vh var(--space-medium) 10vh;
     }
 
     @include media-breakpoint-up(tablet) {
-        --padding: var(--space-giant) var(--space-huge) var(--space-huge);
+        --padding: 20vh var(--space-huge) 10vh;
     }
 
     @include media-breakpoint-up(laptop) {
-        --padding: var(--space-giant) 0;
+        --padding: 20vh 0;
     }
 }
 
