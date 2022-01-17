@@ -51,6 +51,7 @@ module.exports = function  (eleventyConfig) {
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
     eleventyConfig.addWatchTarget("./src/assets/");
     eleventyConfig.addPassthroughCopy("./src/assets/images/");
+    eleventyConfig.addPassthroughCopy("./src/assets/js/main.js");
     eleventyConfig.setLibrary("md", markdownLibrary);
     eleventyConfig.setDataDeepMerge(true);
     
