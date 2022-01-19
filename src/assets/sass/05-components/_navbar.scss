@@ -20,6 +20,14 @@
     @extend %container;
     padding-top: var(--padding-y);
     padding-bottom: var(--padding-y);
+
+    &::after {
+        content: '';
+        display: block;
+        height: 3px;
+        background: var(--text-primary);
+        opacity: var(--opacity-watermark);
+    }
 }
 
 .navbar-header {
