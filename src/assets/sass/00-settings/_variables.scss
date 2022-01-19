@@ -176,8 +176,8 @@ $font-scale: (
 $theme-light: (
     color-primary:                  hsl(0, 0%, 100%),
     color-secondary:                hsl(216, 6%, 17%),
-    color-tertiary:                 hsl(44, 100%, 52%),
-    color-accent:                   hsl(4, 77%, 50%),
+    color-tertiary:                 #ffbe0a,
+    color-accent:                   hsl(10, 77%, 50%),
     body-bg:                        var(--color-primary),
     highlight-bg:                   hsl(44, 89%, 82%),
     text-primary:                   var(--color-secondary),
@@ -200,10 +200,10 @@ $theme-light: (
 );
 
 $theme-dark: (
-    color-primary:                  hsl(216, 6%, 17%),
-    color-secondary:                hsl(0, 0%, 95%),
-    color-tertiary:                 hsl(44, 3%, 24%),
-    color-accent:                   hsl(44, 100%, 52%),
+    color-primary:                  #1e2124,
+    color-secondary:                #f0f2f4,
+    color-tertiary:                 hsl(10, 77%, 50%),
+    color-accent:                   #ffbe0a,
     body-bg:                        var(--color-primary),
     highlight-bg:                   hsl(44, 3%, 24%),
     text-primary:                   var(--color-secondary),
