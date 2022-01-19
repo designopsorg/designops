@@ -78,11 +78,6 @@ class ThemePicker {
         if (this.hasLocalStorage) {
             localStorage.setItem(THEME_STORAGE_KEY, id)
         }
-        if (this.hasThemeColorMeta) {
-            const metaColor = window.metaColors[id]
-            const metaTag = document.querySelector('meta[name="theme-color"]')
-            metaTag.setAttribute('content', metaColor)
-        }
 
         this.setActiveItem()
     }
