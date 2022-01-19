@@ -25,13 +25,18 @@
 .hero-description {
     transform-origin: center;
     animation: animate-fade .6s cubic-bezier(.12,.74,.79,.94) 1s backwards;
-    will-change: transform
+    will-change: transform;
 }
 
 .hero-author {
     transform-origin: center;
     animation: animate-fade .6s cubic-bezier(.12,.74,.79,.94) 1.6s backwards;
-    will-change: transform
+    will-change: transform;
+
+    @include media-breakpoint-up(laptop) {
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+    }
 }
 
 .hero-tweet {
