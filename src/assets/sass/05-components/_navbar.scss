@@ -27,6 +27,10 @@
         height: 3px;
         background: var(--text-primary);
         opacity: var(--opacity-watermark);
+
+        .navbar-state:checked ~ .navbar & {
+            display: none;
+        }
     }
 }
 
