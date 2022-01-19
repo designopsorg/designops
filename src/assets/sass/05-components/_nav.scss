@@ -11,9 +11,7 @@
 .nav-link {
     --padding-y: var(--space-tiny);
     --padding-x: 0;
-    --color: var(--text-primary);
-    --opacity: var(--opacity-subtle);
-    --hover-color: var(--color);
+    --opacity: 1;
     --hover-opacity: 1;
     --selected-color: var(--text-accent);
     --selected-bg: none;
@@ -28,7 +26,6 @@
     }
     @include font-scale(text-small);
     font-weight: $font-weight-medium;
-    color: var(--color);
     border-radius: var(--surface-radius-small);
     text-decoration: none;
     cursor: pointer;
@@ -36,7 +33,6 @@
 
     &:hover,
     &:focus {
-        color: var(--hover-color);
         opacity: var(--hover-opacity);
     }
 
