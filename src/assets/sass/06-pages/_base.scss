@@ -8,13 +8,30 @@ body {
 }
 
 .galaxy {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
-    width: min(rem(320px), 60vw);
-    aspect-ratio: 1 / 1;
-    background: var(--color-tertiary);
-    border-radius: 100%;
-    transform: translate3d(-50%, -50%, 0);
+
+    &::before,
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        aspect-ratio: 1 / 1;
+        border-radius: 100%;
+    }
+
+    &::before {
+        width: min(rem(240px), 60vw);
+        background: var(--color-secondary);
+        transform: translate3d(-66%, -66%, 0);
+        opacity: var(--opacity-watermark);
+    }
+
+    &::after {
+        width: min(rem(32px), 60vw);
+        border: 1.5px solid var(--color-tertiary);
+        transform: translate3d(100%, 100%, 0);
+    }
 }
