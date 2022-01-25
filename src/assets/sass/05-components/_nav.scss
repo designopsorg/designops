@@ -6,6 +6,11 @@
     flex-direction: column;
     gap: var(--gap);
     list-style: none;
+    font-family: var(--font-family-headings);
+    @supports (font-variation-settings: normal) {
+        font-family: var(--font-family-headings-v);
+    }
+    @include font-scale(text-small);
 }
 
 .nav-link {
@@ -20,13 +25,6 @@
     display: inline-flex;
     align-items: center;
     padding: var(--padding-y) var(--padding-x);
-    font-family: var(--font-family-headings);
-    @supports (font-variation-settings: normal) {
-        font-family: var(--font-family-headings-v);
-    }
-    @include font-scale(text-small);
-    font-weight: $font-weight-medium;
-    border-radius: var(--surface-radius-small);
     text-decoration: none;
     cursor: pointer;
     opacity: var(--opacity);
@@ -47,6 +45,20 @@
         cursor: not-allowed;
         pointer-events: none;
     }
+}
+
+.nav-title {
+    --padding-y: var(--space-tiny);
+    --padding-x: 0;
+
+    padding: var(--padding-y) var(--padding-x);
+    @include font-scale(text-small);
+    opacity: var(--opacity-subtle);
+}
+
+.nav-number {
+    color: var(--color);
+    opacity: var(--opacity-subtle);
 }
 
 .nav-fill {
@@ -72,5 +84,28 @@
     .nav-link {
         justify-content: center;
         text-align: center;
+    }
+}
+
+.nav-chapters {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    li {
+        flex: 1 1 rem(160px);
+    }
+
+    @include media-breakpoint-down(laptop) {
+        display: none;
+
+        #chaptersState:checked ~ & {
+            display: flex;
+        }
+    }
+
+    .nav-link {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
     }
 }

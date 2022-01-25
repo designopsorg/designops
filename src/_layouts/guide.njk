@@ -2,29 +2,33 @@
 layout: base
 ---
 
-<section class="container page-grid my-space-giant">
-    <div class="display-large text-uppercase watermark mb-space-giant" style="grid-column: 3 / 13; user-select: none;">GUIDE</div>
+<section class="container page-grid mt-space-large mb-space-giant">
 
-    <nav class="align-self-start mb-space-huge" style="grid-column: 1 / 3; position:sticky; top:120px;">
-        <ul class="nav">
-        {% for item in collections.guide | eleventyNavigation %}
-            {% if item.url %}
-                {% set isCurrent = (item.url == page.url) %}
-                {% set isParent = item.url != '/' and item.url in page.url %}
-                <li>
-                    <a 
-                        href="{% if isCurrent %}#main{% else %}{{ item.url | url }}{% endif %}" 
-                        class="nav-link{% if isCurrent %} selected{% endif %}" 
-                        {% if isCurrent %}aria-current="page"{% endif %}>
-                        {{ item.title }}
-                    </a>
-                </li>
-            {% endif %}
-        {% endfor %}
+    <nav class="chapters page-grid mb-space-giant" style="grid-column: 1 / 13;">
+        <input type="checkbox" id="chaptersState" class="css-toggle">
+        <label for="chaptersState" class="nav-title css-toggle-control" style="grid-column: 1 / 3;">
+            <b>Chapters</b>
+        </label>
+        <ul class="nav nav-chapters gx-laptop-space-large mt-space-tiny mt-laptop-space-none" style="grid-column: 3 / 13;">
+            {% for item in collections.guide | eleventyNavigation %}
+                {% if item.url %}
+                    {% set isCurrent = (item.url == page.url) %}
+                    {% set isParent = item.url != '/' and item.url in page.url %}
+                    <li>
+                        <a 
+                            href="{% if isCurrent %}#main{% else %}{{ item.url | url }}{% endif %}" 
+                            class="nav-link{% if isCurrent %} selected{% endif %}" 
+                            {% if isCurrent %}aria-current="page"{% endif %}>
+                            <span class="nav-number" aria-hidden="true">0{{ loop.index }}</span>
+                            {{ item.title }}
+                        </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
         </ul>
     </nav>
 
-    <article class="format" role="article" style="grid-column: 3 / 11;">
+    <article class="format" role="article" style="grid-column: 3 / 11; grid-row: 2 / 3;">
         {{ content | safe}}
     </article>
 </section>
