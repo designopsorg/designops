@@ -2,6 +2,21 @@
     display: none;
 }
 
+.css-toggle:not(:checked) ~ .css-toggle-control .css-toggle-indicator {
+    .css-toggle-indicator-close {
+        display: none;
+    }
+}
+
+.css-toggle:checked ~ .css-toggle-control .css-toggle-indicator {
+    .css-toggle-indicator-open {
+        display: none;
+    }
+}
+
 .css-toggle-control {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+
