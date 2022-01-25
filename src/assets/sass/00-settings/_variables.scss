@@ -174,12 +174,12 @@ $font-scale: (
 // Theme tokens
 
 $theme-light: (
-    color-primary:                  hsl(0, 0%, 100%),
-    color-secondary:                hsl(216, 6%, 17%),
-    color-tertiary:                 #ffbe0a,
-    color-accent:                   hsl(10, 77%, 50%),
+    color-primary:                  #ffffff,
+    color-secondary:                hsl(260, 20%, 24%),
+    color-tertiary:                 hsl(42, 100%, 54%),
+    color-accent:                   hsl(7, 80%, 48%),
     body-bg:                        var(--color-primary),
-    highlight-bg:                   hsl(44, 89%, 82%),
+    highlight-bg:                   hsl(38, 89%, 86%),
     text-primary:                   var(--color-secondary),
     text-primary-inverted:          var(--color-primary),
     text-secondary:                 var(--color-secondary),
@@ -190,8 +190,8 @@ $theme-light: (
     action-surface-bg:              var(--color-accent),
     surface-bg:                     hsla(0, 0%, 100%, .72),
     surface-shadow-color:           '0, 0%, 16%',
-    surface-shadow-small:           '1px 1px 1px hsla(var(--surface-shadow-color), .12)',
-    surface-shadow-medium:          '1px 1px 1px hsla(var(--surface-shadow-color), .12), 2px 3px 3px hsla(var(--surface-shadow-color), .1), 3px 6px 6px hsla(var(--surface-shadow-color), .04)',
+    surface-shadow-small:           '0 1px 1px hsla(var(--surface-shadow-color), .12)',
+    surface-shadow-medium:          '0 1px 1px hsla(var(--surface-shadow-color), .12), 0 3px 3px hsla(var(--surface-shadow-color), .1), 0 6px 6px hsla(var(--surface-shadow-color), .04)',
     navbar-bg:                      none,
     navbar-bg-open:                 var(--color-tertiary),
     opacity-subtle:                 .64,
@@ -200,10 +200,10 @@ $theme-light: (
 );
 
 $theme-dark: (
-    color-primary:                  #1e2124,
-    color-secondary:                #f0f2f4,
-    color-tertiary:                 hsl(10, 77%, 50%),
-    color-accent:                   #ffbe0a,
+    color-primary:                  hsl(260, 10%, 8%),
+    color-secondary:                #fefbf6,
+    color-tertiary:                 hsl(7, 80%, 32%),
+    color-accent:                   hsl(42, 100%, 64%),
     body-bg:                        var(--color-primary),
     highlight-bg:                   hsl(44, 3%, 24%),
     text-primary:                   var(--color-secondary),
