@@ -47,7 +47,7 @@
     @include media-breakpoint-down(laptop) {
         --padding-y: var(--space-huge);
         --padding-x: 0;
-        --gap: var(--space-medium);
+        --gap-y: var(--space-medium);
 
         display: none;
         padding: var(--padding-y) var(--padding-x);
@@ -58,7 +58,7 @@
     }
 
     @include media-breakpoint-up(laptop) {
-        --gap: 0;
+        --gap-y: 0;
 
         flex-direction: row;
         align-items: center;
