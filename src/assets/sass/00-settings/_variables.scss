@@ -133,7 +133,7 @@ $font-scale: (
         ),
         tablet: (
             font-size:      56,
-            line-height:    60
+            line-height:    64
         )
     ),
     display-medium: (
@@ -156,17 +156,6 @@ $font-scale: (
         tablet: (
             font-size:      112,
             line-height:    104
-        )
-    ),
-    display-xlarge: (
-        null: (
-            font-size:      112,
-            line-height:    96,
-            font-weight:    $font-weight-black
-        ),
-        tablet: (
-            font-size:      160,
-            line-height:    136
         )
     )
 );
