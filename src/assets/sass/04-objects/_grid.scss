@@ -20,9 +20,6 @@
 // Create .row > .col-* children
 //@include make-row-columns();
 
-// Create .g-*, .gy-*, and .gx-* classes
-@include make-gaps();
-
 .page-grid {
     @include media-breakpoint-up(laptop) {
         --gap-x: var(--space-large);
