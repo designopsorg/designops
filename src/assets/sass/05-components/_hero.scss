@@ -11,7 +11,7 @@
         --padding: 20vh var(--space-huge) 10vh;
     }
 
-    @include media-breakpoint-up(laptop) {
+    @include media-breakpoint-up(desktop) {
         --padding: 20vh 0;
     }
 }
@@ -33,7 +33,7 @@
     animation: animate-fade .6s cubic-bezier(.12,.74,.79,.94) 1.6s backwards;
     will-change: transform;
 
-    @include media-breakpoint-up(laptop) {
+    @include media-breakpoint-up(desktop) {
         writing-mode: vertical-lr;
         text-orientation: upright;
     }

@@ -88,7 +88,7 @@
     flex-wrap: wrap;
 
     li {
-        flex: 1 1 rem(160px);
+        flex: 1 1 rem(150px);
     }
 
     @include media-breakpoint-down(laptop) {

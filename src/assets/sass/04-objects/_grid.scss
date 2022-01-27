@@ -21,7 +21,7 @@
 //@include make-row-columns();
 
 .page-grid {
-    @include media-breakpoint-up(laptop) {
+    @include media-breakpoint-up(desktop) {
         --gap-x: var(--space-large);
 
         display: grid;
