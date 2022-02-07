@@ -1,12 +1,25 @@
 ---
 layout: page
-title: Design Operations glossary
-date: 2022-01-09
+title: Glossary
+metaTitle: Design Operations glossary
 navbarTitle: Glossary
+description: A collection of terms often used when talking about DesignOps and Design Systems.
+date: 2022-01-09
 tags: navbar
-order: 4
 permalink: /glossary/
 ---
-<section class="container page-grid my-space-giant">
-    <div class="display-large text-uppercase watermark mb-space-giant" style="grid-column: 3 / 13; user-select: none;">Glossary</div>
-</section>
+
+<div style="grid-column: 3 / 11">
+
+    <ul class="glossary">
+        {% for post in collections.glossary %}
+        <li class="glossary-item">
+            <a href="{{ post.url | url }}" class="glossary-link">
+                <b>{{ post.data.title }}</b>
+                <span class="icon icon-small ml-space-xtiny"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16"/><path d="M13 5l7 7-7 7"/></svg></span>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+
+</div>

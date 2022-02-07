@@ -1,0 +1,18 @@
+.glossary {
+    --padding-x: 0;
+    --hover-bg: none;
+    
+    list-style: none;
+}
+
+.glossary-link {
+    --padding-y: var(--space-tiny);
+    --padding-x: 0;
+
+    display: block;
+    padding: var(--padding-y) var(--padding-x);
+
+    &:hover {
+        background: var(--hover-bg);
+    }
+}
