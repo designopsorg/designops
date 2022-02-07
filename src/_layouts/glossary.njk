@@ -1,0 +1,16 @@
+---
+layout: base
+---
+
+<section class="container page-grid my-space-giant">
+    <header class="mb-space-giant" style="grid-column: 3 / 8">
+        <a href="/glossary/" class="button button-link">
+            <span class="icon icon-small"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5l-7 7 7 7"/><path d="M4 12h16"/></svg></span>
+            <b>Glossary</b>
+        </a>
+    </header>
+    <div style="grid-column: 3 / 11">
+        <h1 class="mb-space-small">{{ title }}</h1>
+        {{ content | safe }}
+    </div>
+</section>

@@ -2,4 +2,11 @@
 layout: base
 ---
 
-{{ content | safe }}
+<section class="container page-grid my-space-giant">
+    <header class="mb-space-giant" style="grid-column: 3 / 8">
+        <h1 class="display-medium mb-space-tiny">{{ title }}</h1>
+        <p>{{ description }}</p>
+    </header>
+
+    {{ content | safe }}
+</section>
