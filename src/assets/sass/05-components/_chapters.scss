@@ -3,5 +3,15 @@
     --padding-x: 0;
 
     padding: var(--padding-y) var(--padding-x);
-    border-bottom: 1px solid;
+
+    @include media-breakpoint-down(laptop) {
+
+        .nav {
+            display: none;
+        }
+
+        #chaptersState:checked ~ .nav {
+            display: flex;
+        }
+    }
 }
