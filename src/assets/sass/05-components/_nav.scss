@@ -1,7 +1,7 @@
 .nav {
     --gap-y: 0;
     --gap-x: 0;
-    --padding-y: 0;
+    --padding-x: 0;
 
     display: flex;
     flex-direction: column;
@@ -30,6 +30,7 @@
     text-decoration: none;
     cursor: pointer;
     opacity: var(--opacity);
+    border-radius: var(--surface-radius-small);
 
     &:hover,
     &:focus {
@@ -83,34 +84,34 @@
     }
 }
 
-.nav-chapters {
+.nav-segmented {
+    --gap-space: var(--space-xtiny);
+    --gap-x: var(--gap-space);
+
     flex-direction: row;
     flex-wrap: wrap;
+    background: rgba(0, 0, 0, .04);
+    padding: var(--gap-space);
+    border-radius: calc(var(--surface-radius-small) + 1px);
 
     li {
         flex: 1 1 rem(150px);
     }
 
-    @include media-breakpoint-down(laptop) {
-        display: none;
-
-        #chaptersState:checked ~ & {
-            display: flex;
-        }
-    }
-
     .nav-link {
         --padding-x: var(--space-small);
-        --selected-color: var(--color-primary);
-        --selected-bg: var(--color-accent);
+        --opacity: var(--opacity-subtle);
+        --hover-color: var(--text-primary);
+        --selected-color: var(--text-primary);
+        --selected-bg: white;
 
         display: flex;
         flex-direction: column;
         align-items: start;
+        white-space: nowrap;
 
         &.selected {
-
-            border-radius: var(--surface-radius-small);
+            box-shadow: var(--surface-shadow-small);
         }
     }
 }

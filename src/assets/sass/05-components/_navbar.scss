@@ -1,5 +1,8 @@
 .navbar {
-    background-color: var(--navbar-bg);
+    --padding-y: var(--space-small);
+    --padding-x: 0;
+
+    padding: var(--padding-y) var(--padding-x);
     user-select: none;
 
     @include media-breakpoint-down(laptop) {
@@ -11,15 +14,19 @@
 }
 
 .navbar-content {
-    --padding-y: var(--space-small);
+    --padding-y: var(--space-tiny);
+    --padding-x: var(--space-medium);
     
     @extend %container;
-    padding-top: var(--padding-y);
-    padding-bottom: var(--padding-y);
+    padding: var(--padding-y) var(--padding-x);
+    background-color: var(--navbar-bg);
+    box-shadow: var(--surface-shadow-medium);
+    border-radius: var(--surface-radius-small);
 }
 
 .navbar-header {
-    --padding-y: 0;
+    --padding-x: 0;
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
