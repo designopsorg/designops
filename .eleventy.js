@@ -54,6 +54,16 @@ module.exports = function  (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/assets/js/main.js");
     eleventyConfig.setLibrary("md", markdownLibrary);
     eleventyConfig.setDataDeepMerge(true);
+
+    eleventyConfig.addCollection("glossary", function(collectionApi) {
+        return collectionApi.getFilteredByGlob("src/glossary/*.md").sort(function(a, b) {
+            let nameA = a.data.title.toUpperCase();
+            let nameB = b.data.title.toUpperCase();
+            if (nameA < nameB) return -1;
+            else if (nameA > nameB) return 1;
+            else return 0;
+        });
+    });
     
     return {
         dir: {
