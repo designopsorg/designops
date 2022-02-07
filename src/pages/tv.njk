@@ -1,46 +1,41 @@
 ---
 layout: page
-title: Design Operations TV
+title: TV
+metaTitle: Design Operations TV
+navbarTitle: Ops TV
 description: A curated collection of video resources.
 date: 2022-01-08
-navbarTitle: Ops TV
 tags: navbar
-order: 3
 permalink: /tv/
 ---
 
-<section class="container page-grid my-space-giant">
-    <div class="display-large text-uppercase watermark mb-space-giant" style="grid-column: 3 / 13; user-select: none;">TV</div>
+<div style="grid-column: 3 / 11">
 
-    <div style="grid-column: 3 / 11;">
-        <p class="text-lead text-primary">A curated collection of video resources.</p>
-
-        {% for item in tv %}
-        <article class="video my-space-giant" role="article">
-            <img src="http://img.youtube.com/vi/{{ item.video_id }}/hqdefault.jpg" class="video-figure" loading="lazy">
-            <div class="video-body">
-                <div class="d-flex gx-space-small align-items-center text-small subtle mb-space-small">
-                    {% for author in item.authors %}
-                        <a href="{{ author.url }}" target="_blank" title="{{ author.name }}" class="d-flex  gx-space-xtiny align-items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle fill="none" cx="12" cy="7" r="5"/><path fill="none" d="M17 14h.352a3 3 0 0 1 2.976 2.628l.391 3.124A2 2 0 0 1 18.734 22H5.266a2 2 0 0 1-1.985-2.248l.39-3.124A3 3 0 0 1 6.649 14H7"/></svg>
-                            {{ author.name }}
-                        </a>
-                    {% endfor %}
-                    {% if item.event %}
-                        <span class="d-flex gx-space-xtiny align-items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle fill="none" cx="12" cy="10" r="3"/><path fill="none" d="M12 2a8 8 0 0 0-8 8c0 1.892.402 3.13 1.5 4.5L12 22l6.5-7.5c1.098-1.37 1.5-2.608 1.5-4.5a8 8 0 0 0-8-8z"/></svg>
-                            {{ item.event }} 
-                        </span>
-                    {% endif %}
-                </div>
-                <p class="mb-space-tiny">{{ item.description }}</p>
-                <a href="https://www.youtube.com/watch?v={{ item. video_id }}" target="_blank" class="button button-link">
-                    <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke-width="2"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zm-2 7.8c0-.295.152-.566.396-.705a.71.71 0 0 1 .77.04l4.5 3.2A.815.815 0 0 1 16 12a.815.815 0 0 1-.334.666l-4.5 3.2a.71.71 0 0 1-.77.04A.809.809 0 0 1 10 15.2V8.8z"/></svg></span>
-                    Watch on Youtube
-                </a>
+    {% for item in tv %}
+    <article class="video mb-space-giant" role="article">
+        <img src="http://img.youtube.com/vi/{{ item.video_id }}/hqdefault.jpg" class="video-figure" loading="lazy">
+        <div class="video-body">
+            <div class="d-flex gx-space-small align-items-center text-small subtle mb-space-small">
+                {% for author in item.authors %}
+                    <a href="{{ author.url }}" target="_blank" title="{{ author.name }}" class="d-flex  gx-space-xtiny align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle fill="none" cx="12" cy="7" r="5"/><path fill="none" d="M17 14h.352a3 3 0 0 1 2.976 2.628l.391 3.124A2 2 0 0 1 18.734 22H5.266a2 2 0 0 1-1.985-2.248l.39-3.124A3 3 0 0 1 6.649 14H7"/></svg>
+                        {{ author.name }}
+                    </a>
+                {% endfor %}
+                {% if item.event %}
+                    <span class="d-flex gx-space-xtiny align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle fill="none" cx="12" cy="10" r="3"/><path fill="none" d="M12 2a8 8 0 0 0-8 8c0 1.892.402 3.13 1.5 4.5L12 22l6.5-7.5c1.098-1.37 1.5-2.608 1.5-4.5a8 8 0 0 0-8-8z"/></svg>
+                        {{ item.event }} 
+                    </span>
+                {% endif %}
             </div>
-        </article>
-        {% endfor %}
+            <p class="mb-space-tiny">{{ item.description }}</p>
+            <a href="https://www.youtube.com/watch?v={{ item. video_id }}" target="_blank" class="button button-link">
+                <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke-width="2"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1zm-2 7.8c0-.295.152-.566.396-.705a.71.71 0 0 1 .77.04l4.5 3.2A.815.815 0 0 1 16 12a.815.815 0 0 1-.334.666l-4.5 3.2a.71.71 0 0 1-.77.04A.809.809 0 0 1 10 15.2V8.8z"/></svg></span>
+                Watch on Youtube
+            </a>
+        </div>
+    </article>
+    {% endfor %}
 
-    </div>
-</section>
+</div>
