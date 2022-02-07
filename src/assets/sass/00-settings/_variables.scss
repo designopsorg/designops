@@ -163,10 +163,10 @@ $font-scale: (
 // Theme tokens
 
 $theme-light: (
-    color-primary:                  #ffffff,
+    color-primary:                  hsl(33, 64%, 96%),
     color-secondary:                hsl(260, 20%, 24%),
-    color-tertiary:                 hsl(42, 100%, 54%),
-    color-accent:                   hsl(7, 80%, 48%),
+    color-tertiary:                 hsl(42, 100%, 64%),
+    color-accent:                   #dc2f18,
     body-bg:                        var(--color-primary),
     highlight-bg:                   hsl(38, 89%, 86%),
     text-primary:                   var(--color-secondary),
@@ -178,18 +178,18 @@ $theme-light: (
     action-surface-color:           var(--text-primary-inverted),
     action-surface-bg:              var(--color-accent),
     surface-bg:                     hsla(0, 0%, 100%, .72),
-    surface-shadow-color:           '0, 0%, 16%',
+    surface-shadow-color:           '33, 44%, 54%',
     surface-shadow-small:           '0 1px 1px hsla(var(--surface-shadow-color), .12)',
-    surface-shadow-medium:          '0 1px 1px hsla(var(--surface-shadow-color), .12), 0 3px 3px hsla(var(--surface-shadow-color), .1), 0 6px 6px hsla(var(--surface-shadow-color), .04)',
-    navbar-bg:                      none,
-    navbar-bg-open:                 var(--color-tertiary),
+    surface-shadow-medium:          '0 1px 2px hsla(var(--surface-shadow-color), .04), 0 2px 4px hsla(var(--surface-shadow-color), .06), 0 4px 12px hsla(var(--surface-shadow-color), .10)',
+    navbar-bg:                      #ffffff,
+    navbar-bg-open:                 var(--navbar-bg),
     opacity-subtle:                 .64,
     opacity-muted:                  .24,
     opacity-watermark:              .08,
 );
 
 $theme-dark: (
-    color-primary:                  hsl(260, 10%, 8%),
+    color-primary:                  hsl(44, 10%, 11%),
     color-secondary:                #fefbf6,
     color-tertiary:                 hsl(7, 80%, 32%),
     color-accent:                   hsl(42, 100%, 64%),
@@ -205,10 +205,10 @@ $theme-dark: (
     action-surface-bg:              var(--color-accent),
     surface-bg:                     hsla(0, 0%, 100%, .72),
     surface-shadow-color:           '265, 100%, 52%',
-    surface-shadow-small:           0,
-    surface-shadow-medium:          0,
-    navbar-bg:                      none,
-    navbar-bg-open:                 var(--color-tertiary),
+    surface-shadow-small:           none,
+    surface-shadow-medium:          none,
+    navbar-bg:                      hsl(44, 3%, 16%),
+    navbar-bg-open:                 var(--navbar-bg),
     opacity-subtle:                 .48,
     opacity-muted:                  .16,
     opacity-watermark:              .06,
@@ -217,7 +217,7 @@ $theme-dark: (
 // Border radius
 
 $border-radius: (
-    surface-radius-small:    rem(3px),
+    surface-radius-small:    rem(6px),
     surface-radius-medium:   rem(12px),
     surface-radius-large:    rem(32px)
 );
