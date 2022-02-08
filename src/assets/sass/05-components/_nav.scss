@@ -90,7 +90,7 @@
 
     flex-direction: row;
     flex-wrap: wrap;
-    background: rgba(0, 0, 0, .04);
+    background: var(--surface-bg-subtle);
     padding: var(--gap-space);
     border-radius: calc(var(--surface-radius-small) + 1px);
 
@@ -103,7 +103,7 @@
         --opacity: var(--opacity-subtle);
         --hover-color: var(--text-primary);
         --selected-color: var(--text-primary);
-        --selected-bg: white;
+        --selected-bg: var(--surface-bg-primary);
 
         display: flex;
         flex-direction: column;
