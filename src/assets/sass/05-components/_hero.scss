@@ -1,18 +1,17 @@
 .hero {
     padding: var(--padding);
-    //background-color: var(--color-tertiary);
 
     @include media-breakpoint-down(tablet) {
         --container-margin-x: var(--space-tiny);
-        --padding: 20vh var(--space-medium) 10vh;
+        --padding: 0 var(--space-medium) 10vh;
     }
 
     @include media-breakpoint-up(tablet) {
-        --padding: 20vh var(--space-huge) 10vh;
+        --padding: 0 var(--space-huge) 10vh;
     }
 
     @include media-breakpoint-up(desktop) {
-        --padding: 20vh 0;
+        --padding: 10vh 0;
     }
 }
 
