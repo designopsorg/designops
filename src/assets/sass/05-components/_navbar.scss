@@ -85,7 +85,7 @@
 .navbar-nav-secondary {
     @include media-breakpoint-up(laptop) {
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
     }
 }
 
